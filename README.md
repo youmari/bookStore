@@ -9,6 +9,7 @@
 - WEBPACK
 - Jest
 - React
+- Redux
 
 ## Getting Started
 ## To run the website locally follow the following steps:
@@ -16,7 +17,7 @@
 ### Clone the project to your local machine
     git clone git@github.com:youmari/bookStore.git
 ### Move to the root directory 
-    cd book-store
+    cd bookStore
 ### Install dependencies
     npm install
 ### Open the website in the browser
