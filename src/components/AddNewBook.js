@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { addBook, getBooks } from '../redux/books/books';
 
 const AddNewBook = () => {
   const [bookTitle, setBookTitle] = useState('');
@@ -16,6 +16,7 @@ const AddNewBook = () => {
     dispatch(addBook({
       title: bookTitle, category: bookCategory, item_id: uuidv4(), author: bookAuthor,
     }));
+    dispatch(getBooks());
     setIsSubmit(true);
     setBookAuthor('');
     setBookTitle('');
