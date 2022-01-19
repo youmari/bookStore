@@ -6,13 +6,16 @@ import { addBook } from '../redux/books/books';
 const AddNewBook = () => {
   const [bookTitle, setBookTitle] = useState('');
   const [bookAuthor, setBookAuthor] = useState('');
+  // const [bookCategory, setBookCategory] = useState('');
   const [isSubmit, setIsSubmit] = useState(false);
   const dispatch = useDispatch();
 
   const submitNewBook = (e) => {
     e.preventDefault();
     if (bookAuthor === '' || bookTitle === '') return;
-    dispatch(addBook({ title: bookTitle, author: bookAuthor, id: uuidv4() }));
+    dispatch(addBook({
+      title: bookTitle, category: bookAuthor, item_id: uuidv4(),
+    }));
     setIsSubmit(true);
     setBookAuthor('');
     setBookTitle('');
