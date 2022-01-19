@@ -1,12 +1,12 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook, getBooks } from '../redux/books/books';
+import { addBook } from '../redux/books/books';
 
 const AddNewBook = () => {
   const [bookTitle, setBookTitle] = useState('');
   const [bookAuthor, setBookAuthor] = useState('');
-  const [bookCategory, setBookCategory] = useState('');
+  // const [bookCategory, setBookCategory] = useState('');
   const [isSubmit, setIsSubmit] = useState(false);
   const dispatch = useDispatch();
 
@@ -14,9 +14,8 @@ const AddNewBook = () => {
     e.preventDefault();
     if (bookAuthor === '' || bookTitle === '') return;
     dispatch(addBook({
-      title: bookTitle, category: bookCategory, item_id: uuidv4(), author: bookAuthor,
+      title: bookTitle, category: bookAuthor, item_id: uuidv4(),
     }));
-    dispatch(getBooks());
     setIsSubmit(true);
     setBookAuthor('');
     setBookTitle('');
@@ -49,7 +48,7 @@ const AddNewBook = () => {
           />
         </label>
         <label htmlFor="book-category">
-          <select name="book-category" id="category" onChange={(e) => setBookCategory(e.target.value)}>
+          <select name="book-category" id="category">
             <option value="Category" hidden>
               Category
             </option>

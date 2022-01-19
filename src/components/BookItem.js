@@ -1,18 +1,27 @@
+/* eslint-disable camelcase */
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/books';
 
-const BookItem = ({ book: { title, author, id } }) => {
+const BookItem = ({ book: { title, category, item_id } }) => {
   const dispatch = useDispatch();
+  const handleOnDelete = () => {
+    dispatch(removeBook({ item_id }));
+  };
   return (
     <article className="book-item">
       <div className="book-info-container">
         <p>Action</p>
         <h2 className="book-title">{title}</h2>
-        <h4 className="book-author">{author}</h4>
+        <h4 className="book-author">{category}</h4>
         <div className="book-functions">
           <button type="button">Comments</button>
-          <button onClick={() => dispatch(removeBook({ id }))} type="button">Remove</button>
+          <button
+            onClick={() => handleOnDelete()}
+            type="button"
+          >
+            Remove
+          </button>
           <button type="button">Edit</button>
         </div>
       </div>
@@ -28,14 +37,14 @@ const BookItem = ({ book: { title, author, id } }) => {
 BookItem.propTypes = {
   book: PropTypes.objectOf(PropTypes.string).isRequired,
   title: PropTypes.string,
-  author: PropTypes.string,
-  id: PropTypes.string,
+  category: PropTypes.string,
+  item_id: PropTypes.string,
 };
 
 BookItem.defaultProps = {
   title: '',
-  author: '',
-  id: '',
+  category: '',
+  item_id: '',
 };
 
 export default BookItem;
