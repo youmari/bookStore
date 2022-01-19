@@ -5,7 +5,8 @@ const Books = () => {
   const books = useSelector((state) => state.reducer);
   return (
     <section>
-      {books?.map((book) => <BookItem key={book.id} book={book} />)}
+      {/* {books?.map((book) => <BookItem key={book.id} book={book} />)} */}
+      test
     </section>
   );
 };

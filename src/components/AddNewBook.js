@@ -6,13 +6,16 @@ import { addBook } from '../redux/books/books';
 const AddNewBook = () => {
   const [bookTitle, setBookTitle] = useState('');
   const [bookAuthor, setBookAuthor] = useState('');
+  const [bookCategory, setBookCategory] = useState('');
   const [isSubmit, setIsSubmit] = useState(false);
   const dispatch = useDispatch();
 
   const submitNewBook = (e) => {
     e.preventDefault();
     if (bookAuthor === '' || bookTitle === '') return;
-    dispatch(addBook({ title: bookTitle, author: bookAuthor, id: uuidv4() }));
+    dispatch(addBook({
+      title: bookTitle, category: bookCategory, item_id: uuidv4(), author: bookAuthor,
+    }));
     setIsSubmit(true);
     setBookAuthor('');
     setBookTitle('');
@@ -45,7 +48,7 @@ const AddNewBook = () => {
           />
         </label>
         <label htmlFor="book-category">
-          <select name="book-category" id="category">
+          <select name="book-category" id="category" onChange={(e) => setBookCategory(e.target.value)}>
             <option value="Category" hidden>
               Category
             </option>
