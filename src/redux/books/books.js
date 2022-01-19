@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-
 import axios from 'axios';
 
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/nxoUcOAchjPBlXPUHhlw/books';
