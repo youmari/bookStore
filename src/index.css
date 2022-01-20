@@ -2,8 +2,42 @@
   margin: 0;
 }
 
+body {
+  background-color: #f5f6fa;
+}
+
 header {
   display: flex;
+  align-items: center;
+  height: 25px;
+  margin: 0 0 38px;
+  padding: 23px 99px 27px 100px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 #0000000c;
+}
+
+.logo {
+  width: 240px;
+  height: 37px;
+  font-family: Montserrat, sans-serif;
+  font-size: 27px;
+  font-weight: bold;
+  color: #0290ff;
+}
+
+.link {
+  width: 59px;
+  height: 16px;
+  font-family: Montserrat, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.9px;
+  color: #121212;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #9e9d9d;
 }
 
 header nav ul {
@@ -23,13 +57,208 @@ nav ul li a {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 5rem;
+  margin: 2.313rem 6.25rem 0;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.books-section {
+  margin: 0 8rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 form {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 1rem;
 }
 
 article {
   margin: 1rem;
+}
+
+.item-btn {
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.775rem;
+  font-weight: 300;
+  color: #4386bf;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding-left: 0;
+  border-right: 1px solid #e8e8e8;
+}
+
+.last {
+  border: none;
+}
+
+.book-title {
+  width: 197px;
+  height: 29px;
+  margin: 3px 323px 0 0;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: var(--black-two);
+}
+
+.category {
+  width: 49px;
+  height: 18px;
+  margin: 0 39px 0 0;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #121212;
+}
+
+.book-author {
+  width: 107px;
+  height: 19px;
+  margin: 4px 0 0;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #4386bf;
+  margin-bottom: 0.7rem;
+}
+
+.current-chapter {
+  padding-left: 1rem;
+  border-left: 1px solid #e8e8e8;
+}
+
+.Oval-2 {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #379cf6;
+  border-image-slice: 1;
+  border-radius: 50px;
+}
+
+.percent-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.completed {
+  font: 0.775rem "Montserrat", sans-serif;
+  opacity: 0.5;
+  color: #121212;
+}
+
+.percent {
+  width: 68px;
+  height: 39px;
+  font-family: Montserrat, sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.item-progress-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.chapter {
+  margin: 0.3rem 0;
+  opacity: 0.5;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #121212;
+}
+
+.chapter1 {
+  font-family: RobotoSlab, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.add-book-title {
+  margin: 1rem 6rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.title-input {
+  margin-left: 2.3rem;
+  padding: 13px 400px 13px 17px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.15px;
+}
+
+.author-input,
+.book-category {
+  padding: 13px 15px 13px 17px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.15px;
+}
+
+.add-book-btn {
+  padding: 0.4rem 4rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.profile-btn {
+  margin-left: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: transparent;
+  width: 2.813rem;
+  height: 2.813rem;
+  padding: 0.875rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 25px;
+}
+
+.profile-icon {
+  width: 15px;
+  height: 15px;
 }

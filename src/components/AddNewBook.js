@@ -23,10 +23,11 @@ const AddNewBook = () => {
   return (
     <section>
       {isSubmit && <h1>Book added successfully</h1>}
-      <h2>ADD NEW BOOK</h2>
+      <h2 className="add-book-title">ADD NEW BOOK</h2>
       <form action="#" onSubmit={(e) => e.preventDefault()}>
         <label htmlFor="title">
           <input
+            className="title-input"
             type="text"
             name="title"
             id="title"
@@ -38,6 +39,7 @@ const AddNewBook = () => {
         </label>
         <label htmlFor="author">
           <input
+            className="author-input"
             type="text"
             name="author"
             id="author"
@@ -48,7 +50,7 @@ const AddNewBook = () => {
           />
         </label>
         <label htmlFor="book-category">
-          <select name="book-category" id="category">
+          <select className="book-category" name="book-category" id="category">
             <option value="Category" hidden>
               Category
             </option>
@@ -56,7 +58,7 @@ const AddNewBook = () => {
             <option value="Adventure">Adventure</option>
           </select>
         </label>
-        <button type="submit" onClick={submitNewBook}>ADD BOOK</button>
+        <button className="add-book-btn" type="submit" onClick={submitNewBook}>ADD BOOK</button>
       </form>
     </section>
   );
