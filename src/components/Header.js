@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import user from '../assets/user.png';
 
 const Header = () => (
   <header>
@@ -17,6 +18,9 @@ const Header = () => (
         </li>
       </ul>
     </nav>
+    <button type="button" className="profile-btn">
+      <img src={user} className="profile-icon" alt="profile-icon" />
+    </button>
   </header>
 );
 

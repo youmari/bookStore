@@ -25,15 +25,22 @@ const BookItem = ({ book: { title, category, item_id } }) => {
           >
             Remove
           </button>
-          <button className="item-btn" type="button">
+          <button className="item-btn last" type="button">
             Edit
           </button>
         </div>
       </div>
+      <div className="Oval-2" />
+      <div className="percent-div">
+        <span className="percent">100%</span>
+        <span className="completed">Completed</span>
+      </div>
       <div className="current-chapter">
         <h4 className="chapter">CURRENT CHAPTER</h4>
         <h5 className="chapter1">chapter 17</h5>
-        <button className="item-progress-btn" type="button">UPDATE PROGRESS</button>
+        <button className="item-progress-btn" type="button">
+          UPDATE PROGRESS
+        </button>
       </div>
     </article>
   );

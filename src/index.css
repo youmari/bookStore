@@ -94,6 +94,10 @@ article {
   border-right: 1px solid #e8e8e8;
 }
 
+.last {
+  border: none;
+}
+
 .book-title {
   width: 197px;
   height: 29px;
@@ -130,6 +134,38 @@ article {
 .current-chapter {
   padding-left: 1rem;
   border-left: 1px solid #e8e8e8;
+}
+
+.Oval-2 {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #379cf6;
+  border-image-slice: 1;
+  border-radius: 50px;
+}
+
+.percent-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.completed {
+  font: 0.775rem "Montserrat", sans-serif;
+  opacity: 0.5;
+  color: #121212;
+}
+
+.percent {
+  width: 68px;
+  height: 39px;
+  font-family: Montserrat, sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
 }
 
 .item-progress-btn {
@@ -205,4 +241,24 @@ article {
   color: #fff;
   border: none;
   cursor: pointer;
+}
+
+.profile-btn {
+  margin-left: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: transparent;
+  width: 2.813rem;
+  height: 2.813rem;
+  padding: 0.875rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 25px;
+}
+
+.profile-icon {
+  width: 15px;
+  height: 15px;
 }
