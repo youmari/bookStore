@@ -11,7 +11,7 @@ const Books = () => {
   }, []);
 
   return (
-    <section>
+    <section className="books-section">
       {books?.map((book) => <BookItem key={book.item_id} book={book} />)}
     </section>
   );
