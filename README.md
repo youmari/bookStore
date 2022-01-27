@@ -11,6 +11,9 @@
 - React
 - Redux
 
+## Live demo
+ [Live demo](https://youmari-book-store.herokuapp.com/)
+
 ## Getting Started
 ## To run the website locally follow the following steps:
 
